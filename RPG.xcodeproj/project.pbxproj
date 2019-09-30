@@ -76,12 +76,9 @@
 		C77AC9E0234248E60002440B /* RPG */ = {
 			isa = PBXGroup;
 			children = (
-				C77AC9E1234248E60002440B /* AppDelegate.swift */,
-				C77AC9E3234248E60002440B /* ViewController.swift */,
-				C77AC9E5234248E70002440B /* Assets.xcassets */,
-				C77AC9E7234248E70002440B /* Main.storyboard */,
-				C77AC9EA234248E70002440B /* Info.plist */,
-				C77AC9EB234248E70002440B /* RPG.entitlements */,
+				C77ACA0223424B440002440B /* Resources */,
+				C77ACA0123424B370002440B /* Core */,
+				C77ACA0023424B310002440B /* UI */,
 			);
 			path = RPG;
 			sourceTree = "<group>";
@@ -95,6 +92,41 @@
 			path = RPGTests;
 			sourceTree = "<group>";
 		};
+		C77ACA0023424B310002440B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C77ACA0323424B500002440B /* Main */,
+				C77AC9E1234248E60002440B /* AppDelegate.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C77ACA0123424B370002440B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C77ACA0223424B440002440B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C77AC9E5234248E70002440B /* Assets.xcassets */,
+				C77AC9EA234248E70002440B /* Info.plist */,
+				C77AC9EB234248E70002440B /* RPG.entitlements */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C77ACA0323424B500002440B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C77AC9E3234248E60002440B /* ViewController.swift */,
+				C77AC9E7234248E70002440B /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,6 +137,7 @@
 				C77AC9DA234248E60002440B /* Sources */,
 				C77AC9DB234248E60002440B /* Frameworks */,
 				C77AC9DC234248E60002440B /* Resources */,
+				C77AC9FF2342491D0002440B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -189,6 +222,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C77AC9FF2342491D0002440B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH} yyyyyyy\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_NAME}\"\ncp -v \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_NAME}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C77AC9DA234248E60002440B /* Sources */ = {
@@ -349,11 +402,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = RPG/RPG.entitlements;
+				CODE_SIGN_ENTITLEMENTS = RPG/Resources/RPG.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5TE3G4UK44;
-				INFOPLIST_FILE = RPG/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RPG/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -368,11 +421,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = RPG/RPG.entitlements;
+				CODE_SIGN_ENTITLEMENTS = RPG/Resources/RPG.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5TE3G4UK44;
-				INFOPLIST_FILE = RPG/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RPG/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
